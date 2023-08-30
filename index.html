@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula tu porcentaje de grasa corporal</title>
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <h1>Calcula tu porcentaje de grasa corporal</h1>
+    <p>Cuando queremos saber si nuestro peso es el adecuado en términos de salud, normalmente recurrimos al IMC (Índice
+        de Masa Corporal). Sin embargo, esta no es para nada la mejor medida para este fin, ya que es solo una relación
+        entre nuestro peso y nuestra estatura que no tiene en cuenta cuánto músculo y cuánta grasa tiene nuestro cuerpo.
+    </p>
+    <p>Es por este motivo, que los expertos suelen aconsejar tener en cuenta el porcentaje de grasa corporal en su
+        lugar. La mejor forma de conocer este índice con precisión pasa por acudir a un profesional cualificado que nos
+        proporcione un resultado exacto. No obstante, <strong>es posible conseguir una estimación de este
+            porcentaje en casa totalmente gratis,</strong> empleando solo una cinta métrica. Para ello
+        solo necesitas rellenar el siguiente formulario.
+    </p>
+    <h2>Calcula tu porcentaje de grasa corporal</h2>
+    <form id="baiForm">
+        <label>Género:</label><br>
+        <input type="radio" id="hombre" name="gender" value="hombre" required>
+        <label for="hombre">Hombre</label>
+        <input type="radio" id="mujer" name="gender" value="mujer" required>
+        <label for="mujer">Mujer</label><br>
+        <label for="age">Edad:</label><br>
+        <input type="number" id="age" name="age" required><br>
+        <label for="weight">Peso:</label><br>
+        <input type="number" id="weight" name="weight" required><br>
+        <label for="height">Altura en cms:</label><br>
+        <input type="number" id="height" name="height" required><br>
+        <label for="neck">Circunferencia del cuello en cms:</label><br>
+        <input type="number" id="neck" name="neck" required><br>
+        <label for="waist">Circunferencia de la cintura <span class="man">(a la altura del ombligo)</span><span
+                class="woman d-none">(en la zona más delgada)</span> en cms:</label><br>
+        <input type="number" id="waist" name="waist" required><br>
+        <label for="hip" class="woman d-none">Circunferencia de la cadera en cms:</label><br>
+        <input type="number" id="hip" name="hip" required class="woman d-none"><br>
+        <input type="button" value="Calcular" id="calculate-btn"><br>
+        <input type="reset" value="Reset">
+    </form>
+
+    <div id="bai"></div>
+
+    <table id="fat-mass-table">
+        <tr>
+            <th>Categoría</th>
+            <th>Mujeres (% de grasa)</th>
+            <th>Hombres (% de grasa)</th>
+        </tr>
+        <tr>
+            <td>Bajo</td>
+            <td id="mujer-bajo">
+                < 13% </td>
+            <td id="hombre-bajo">2% - 5%</td>
+        </tr>
+        <tr>
+            <td>Atlético</td>
+            <td id="mujer-atletico">14% - 20%</td>
+            <td id="hombre-atletico">6% - 13%</td>
+        </tr>
+        <tr>
+            <td>En forma</td>
+            <td id="mujer-normal">21% - 24%</td>
+            <td id="hombre-normal">14% - 17%</td>
+        </tr>
+        <tr>
+            <td>Aceptable</td>
+            <td id="mujer-aceptable">25% - 31%</td>
+            <td id="hombre-aceptable">18% - 25%</td>
+        </tr>
+        <tr>
+            <td>Obeso</td>
+            <td id="mujer-obesidad">> 32%</td>
+            <td id="hombre-obesidad">> 26%</td>
+        </tr>
+    </table>
+
+    <h2>Calcula tu gasto calórico diario</h2>
+    <form id="caloric-expenditure">
+        <label>Estilo de vida:</label><br>
+        <input type="radio" id="sedentary" name="life-style" value="sedentary" required>
+        <label for="sedentary">Sedentario</label><br>
+        <input type="radio" id="low-exercise" name="life-style" value="low-exercise" required>
+        <label for="low-exercise">Ejercicio ligero (1-3 veces por semana)</label><br>
+        <input type="radio" id="medium-exercise" name="life-style" value="medium-exercise" required>
+        <label for="medium-exercise">Ejercicio medio (3-5 veces por semana)</label><br>
+        <input type="radio" id="high-exercise" name="life-style" value="high-exercise" required>
+        <label for="high-exercise">Ejercicio alto (6-7 veces por semana)</label><br>
+        <input type="radio" id="elite-athlete" name="life-style" value="elite-athlete" required>
+        <label for="elite-athlete">Deportista de élite</label><br>
+
+        <input type="button" value="Calcular gasto calórico diario" id="caloric-expenditure-btn"><br>
+        <input type="reset" value="Reset">
+    </form>
+
+    <div id="caloric-expenditure-result"></div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
