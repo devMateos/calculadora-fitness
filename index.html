@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcula tu porcentaje de grasa corporal</title>
+    <title>Calculadora fitness</title>
 
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
-    <h1>Calcula tu porcentaje de grasa corporal</h1>
+    <h1>Calculadora fitness</h1>
+    <h2>Calcula tu porcentaje de grasa corporal</h2>
     <p>Cuando queremos saber si nuestro peso es el adecuado en términos de salud, normalmente recurrimos al IMC (Índice
         de Masa Corporal). Sin embargo, esta no es para nada la mejor medida para este fin, ya que es solo una relación
         entre nuestro peso y nuestra estatura que no tiene en cuenta cuánto músculo y cuánta grasa tiene nuestro cuerpo.
@@ -21,8 +22,8 @@
             porcentaje en casa totalmente gratis,</strong> empleando solo una cinta métrica. Para ello
         solo necesitas rellenar el siguiente formulario.
     </p>
-    <h2>Calcula tu porcentaje de grasa corporal</h2>
-    <form id="baiForm">
+    <h3>Utiliza nuestra calculadora para conocer tu porcentaje de grasa corporal</h3>
+    <form id="fitness-form">
         <label>Género:</label><br>
         <input type="radio" id="hombre" name="gender" value="hombre" required>
         <label for="hombre">Hombre</label>
@@ -45,7 +46,7 @@
         <input type="reset" value="Reset">
     </form>
 
-    <div id="bai"></div>
+    <div id="fitness-info"></div>
 
     <table id="fat-mass-table">
         <tr>
@@ -56,28 +57,24 @@
         <tr>
             <td>Bajo</td>
             <td id="mujer-bajo">
-                < 13% </td>
-            <td id="hombre-bajo">2% - 5%</td>
+                < 21% </td>
+            <td id="hombre-bajo">
+                < 8% </td>
         </tr>
         <tr>
-            <td>Atlético</td>
-            <td id="mujer-atletico">14% - 20%</td>
-            <td id="hombre-atletico">6% - 13%</td>
+            <td>Saludable</td>
+            <td id="mujer-saludable">21% - 33%</td>
+            <td id="hombre-saludable">8% - 20%</td>
         </tr>
         <tr>
             <td>En forma</td>
-            <td id="mujer-normal">21% - 24%</td>
-            <td id="hombre-normal">14% - 17%</td>
-        </tr>
-        <tr>
-            <td>Aceptable</td>
-            <td id="mujer-aceptable">25% - 31%</td>
-            <td id="hombre-aceptable">18% - 25%</td>
+            <td id="mujer-sobrepeso">33% - 39%</td>
+            <td id="hombre-sobrepeso">20% - 25%</td>
         </tr>
         <tr>
             <td>Obeso</td>
-            <td id="mujer-obesidad">> 32%</td>
-            <td id="hombre-obesidad">> 26%</td>
+            <td id="mujer-obesidad">> 39%</td>
+            <td id="hombre-obesidad">> 25%</td>
         </tr>
     </table>
 

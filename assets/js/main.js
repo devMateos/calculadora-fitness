@@ -1,5 +1,5 @@
 const calculateButton = document.querySelector("#calculate-btn");
-const showBAI = document.querySelector("#bai");
+const showFitnessInfo = document.querySelector("#fitness-info");
 const womanData = document.querySelectorAll(".woman");
 const manData = document.querySelectorAll(".man");
 
@@ -82,7 +82,7 @@ calculateButton.addEventListener("click", () => {
     const bmi = calculations.calculateBMI();
     const fatMass = calculations.calculateFatMass();
 
-    showBAI.innerText =
+    showFitnessInfo.innerText =
         `Tu Índice de Masa Corporal (IMC) es: ${bmi}
     El porcentaje estimado de grasa corporal es: ${fatPercentage}%
     Tu cantidad de grasa total es: ${fatMass}kg`;
@@ -94,27 +94,23 @@ calculateButton.addEventListener("click", () => {
     function showTable() {
         let category;
         if (collectData().gender === "mujer") {
-            if (fatPercentage < 13) {
+            if (fatPercentage < 21) {
                 category = "bajo";
-            } else if (13 <= fatPercentage && fatPercentage < 20) {
-                category = "atletico";
-            } else if (20 <= fatPercentage && fatPercentage < 25) {
-                category = "normal";
-            } else if (25 <= fatPercentage && fatPercentage < 32) {
-                category = "aceptable";
-            } else if (32 <= fatPercentage) {
+            } else if (21 <= fatPercentage && fatPercentage < 33) {
+                category = "saludable";
+            } else if (33 <= fatPercentage && fatPercentage < 39) {
+                category = "sobrepeso";
+            } else if (39 <= fatPercentage) {
                 category = "obesidad";
             }
         } else if (collectData().gender === "hombre") {
-            if (fatPercentage < 5) {
+            if (fatPercentage < 8) {
                 category = "bajo";
-            } else if (5 <= fatPercentage && fatPercentage < 13) {
-                category = "atletico";
-            } else if (13 <= fatPercentage && fatPercentage < 17) {
-                category = "normal";
-            } else if (17 <= fatPercentage && fatPercentage < 26) {
-                category = "aceptable";
-            } else if (26 <= fatPercentage) {
+            } else if (8 <= fatPercentage && fatPercentage < 20) {
+                category = "saludable";
+            } else if (20 <= fatPercentage && fatPercentage < 25) {
+                category = "sobrepeso";
+            } else if (25 <= fatPercentage) {
                 category = "obesidad";
             }
         }
